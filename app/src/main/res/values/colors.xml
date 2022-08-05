@@ -14,4 +14,6 @@
 
     <color name="yellow_button">#FFC400</color>
 
+    <color name="no_black">#353535</color>
+
 </resources>

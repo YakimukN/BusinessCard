@@ -7,37 +7,37 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-        <TextView
-            style="@style/TextAppearance.MaterialComponents.Caption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="You're Logged-In as" />
+<!--        <TextView-->
+<!--            style="@style/TextAppearance.MaterialComponents.Caption"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="You're Logged-In as" />-->
 
-        <TextView
-            android:id="@+id/emailTv"
-            style="@style/TextAppearance.MaterialComponents.Body1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Email"
-            android:textStyle="bold"
-            android:textSize="36sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/emailTv"-->
+<!--            style="@style/TextAppearance.MaterialComponents.Body1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:text="Email"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="36sp" />-->
 
-        <Button
-            android:id="@+id/logoutBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Logout"
-            android:layout_marginTop="120dp"
-            android:layout_gravity="center"/>
+<!--        <Button-->
+<!--            android:id="@+id/logoutBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Logout"-->
+<!--            android:layout_marginTop="120dp"-->
+<!--            android:layout_gravity="center"/>-->
 
         <FrameLayout
             android:id="@+id/fragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="top"
+            android:layout_marginBottom="50dp"
             />
-
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottomAppBar"
@@ -69,15 +69,11 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
-            android:layout_marginBottom="-25dp"
             android:backgroundTint="@color/white"
             android:src="@drawable/ic_add"
             app:borderWidth="0dp"
             app:layout_anchor="@id/bottomAppBar"
-
-
             app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

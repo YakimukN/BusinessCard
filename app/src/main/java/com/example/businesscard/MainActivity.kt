@@ -30,10 +30,10 @@ class MainActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
 
-        binding.logoutBtn.setOnClickListener {
-            firebaseAuth.signOut()
-            checkUser()
-        }
+//        binding.logoutBtn.setOnClickListener {
+//            firebaseAuth.signOut()
+//            checkUser()
+//        }
 
 
 
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser != null){
             val email = firebaseUser.email
-            binding.emailTv.text = email
+//            binding.emailTv.text = email
         } else {
             startActivity(Intent(this, HelloActivity::class.java))
             finish()
