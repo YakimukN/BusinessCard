@@ -30,10 +30,10 @@ class MainActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
 
-//        binding.logoutBtn.setOnClickListener {
-//            firebaseAuth.signOut()
-//            checkUser()
-//        }
+        binding.logoutBtn.setOnClickListener {
+            firebaseAuth.signOut()
+            checkUser()
+        }
 
 
 
