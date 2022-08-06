@@ -9,9 +9,12 @@
     tools:context=".fragments.ProfileFragment">
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="top">
+        android:layout_gravity="top"
+        app:layout_constraintTop_toBottomOf="parent"
+        tools:layout_editor_absoluteX="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,141 +24,141 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                app:cardCornerRadius="128dp"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                app:cardCornerRadius="128dp">
 
                 <ImageView
-                    android:src="@drawable/women_photo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/women_photo" />
 
             </androidx.cardview.widget.CardView>
 
             <!--       UserName    -->
             <TextView
-                android:text="UserName"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:text="UserName"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             <!--            user's email-->
             <TextView
+                android:id="@+id/emailTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Email"
                 android:textSize="20sp"
-                android:textStyle="italic"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:textStyle="italic" />
 
             <androidx.cardview.widget.CardView
-
-
                 android:visibility="visible"
 
 
-                app:cardCornerRadius="20dp"
                 android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
                 android:layout_marginTop="15dp"
                 android:backgroundTint="@color/no_black"
-                android:layout_width="match_parent"
-                android:layout_height="200dp">
+                app:cardCornerRadius="20dp">
 
                 <LinearLayout
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginEnd="30dp"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical">
 
 
                     <LinearLayout
-                        android:background="@color/yellow_button"
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:background="@color/yellow_button"
+                        android:orientation="vertical">
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"
-                            android:layout_gravity="center"
                             android:text="Name Surname"
-                            android:textStyle="bold"
+                            android:textColor="@color/black"
                             android:textSize="20dp"
-                            android:textColor="@color/black"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:textStyle="bold" />
+
                         <TextView
-                            android:layout_marginBottom="3dp"
-                            android:layout_gravity="center"
-                            android:text="Who are you?"
-                            android:textSize="17dp"
-                            android:textStyle="italic"
-                            android:textColor="@color/black"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="3dp"
+                            android:text="Who are you?"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="italic" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
 
                         <ImageView
-                            android:src="@drawable/ic_phone"
                             android:layout_width="30dp"
-                            android:layout_height="30dp"/>
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_phone" />
 
                         <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="+375 (**) *** ** **"
-                            android:textColor="@color/white"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:textColor="@color/white" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <ImageView
-                            android:src="@drawable/ic_linkedin"
                             android:layout_width="30dp"
-                            android:layout_height="30dp"/>
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_linkedin" />
 
                         <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="link"
-                            android:textColor="@color/white"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:textColor="@color/white" />
 
                     </LinearLayout>
 
                     <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:orientation="horizontal">
 
                         <ImageView
-                            android:src="@drawable/ic_github"
                             android:layout_width="30dp"
-                            android:layout_height="30dp"/>
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_github" />
 
                         <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="link"
-                            android:textColor="@color/white"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:textColor="@color/white" />
 
                     </LinearLayout>
 
@@ -164,85 +167,85 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-
-
                 android:visibility="visible"
 
 
                 android:id="@+id/backgroundCardView1"
-                app:cardCornerRadius="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
                 android:layout_marginTop="15dp"
                 android:backgroundTint="@color/no_black"
-                android:layout_width="match_parent"
-                android:layout_height="200dp">
+                app:cardCornerRadius="20dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_marginTop="20dp"
-                        android:text="nickName"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textColor="@color/yellow_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-
-                    <TextView
-                        android:text="About me: I'm not running away from hard work, I'm too lazy to run."
-                        android:textSize="15dp"
-                        android:textColor="@color/teal_200"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="I think if we tell people that the brain is an application, they will start using it."
-                        android:textSize="15dp"
-                        android:textColor="@color/teal_200"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="nickName"
+                        android:textColor="@color/yellow_button"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"/>
+                        android:layout_marginEnd="30dp"
+                        android:text="About me: I'm not running away from hard work, I'm too lazy to run."
+                        android:textColor="@color/teal_200"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:text="I think if we tell people that the brain is an application, they will start using it."
+                        android:textColor="@color/teal_200"
+                        android:textSize="15dp" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardView2"
+
                 android:visibility="visible"
-                app:strokeColor="@color/blue_dark"
-                app:strokeWidth="2dp"
-                app:cardCornerRadius="20dp"
-                android:layout_marginTop="15dp"
+
+                android:id="@+id/cardView2"
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="20dp"
+                app:strokeColor="@color/blue_dark"
+                app:strokeWidth="2dp">
 
                 <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Name Surname"
-                        android:textStyle="italic|bold"
                         android:textColor="@color/blue_dark"
                         android:textSize="30sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textStyle="italic|bold" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Who are you?"
                         android:textColor="@color/blue_dark"
-                        android:textSize="20sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -250,104 +253,106 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:visibility="visible"
+
+
                 android:id="@+id/backgroundCardView2"
-                app:strokeColor="@color/blue_dark"
-                app:strokeWidth="2dp"
-                app:cardCornerRadius="20dp"
-                android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="20dp"
+                app:strokeColor="@color/blue_dark"
+                app:strokeWidth="2dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <com.google.android.material.card.MaterialCardView
-                        android:layout_margin="20dp"
-                        app:strokeWidth="3dp"
-                        app:strokeColor="@color/blue_dark"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:strokeColor="@color/blue_dark"
+                        app:strokeWidth="3dp">
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="end"
                             android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
                             android:gravity="end"
                             android:text="Name Surname"
-                            android:textStyle="italic|bold"
                             android:textSize="27sp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:textStyle="italic|bold" />
 
                     </com.google.android.material.card.MaterialCardView>
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_marginStart="20dp"
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
 
                             <TextView
-                                android:textColor="@color/no_black"
-                                android:textSize="15sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:text="Phone:"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:textColor="@color/no_black"
+                                android:textSize="15sp" />
 
                             <TextView
-                                android:textColor="@color/no_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_marginTop="7dp"
-                                android:textSize="15sp"
                                 android:text="GitHub:"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:textColor="@color/no_black"
+                                android:textSize="15sp" />
 
                             <TextView
-                                android:textColor="@color/no_black"
-                                android:layout_marginTop="7dp"
-                                android:textSize="15sp"
-                                android:text="LinkedIn:"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:text="LinkedIn:"
+                                android:textColor="@color/no_black"
+                                android:textSize="15sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_marginStart="15dp"
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:orientation="vertical">
 
                             <TextView
-                                android:textColor="@color/no_black"
-                                android:textSize="15sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:text="+375 (**) *** ** **"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:textColor="@color/no_black"
+                                android:textSize="15sp" />
 
                             <TextView
-                                android:textColor="@color/no_black"
-                                android:layout_marginTop="7dp"
-                                android:textSize="15sp"
-                                android:text="link"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:text="link"
+                                android:textColor="@color/no_black"
+                                android:textSize="15sp" />
 
                             <TextView
-                                android:textColor="@color/no_black"
-                                android:layout_marginTop="7dp"
-                                android:textSize="15sp"
-                                android:text="link"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:text="link"
+                                android:textColor="@color/no_black"
+                                android:textSize="15sp" />
 
                         </LinearLayout>
 
@@ -357,7 +362,13 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-
+            <Button
+                android:id="@+id/logoutBtn"
+                android:text="Logout"
+                android:layout_marginTop="20sp"
+                android:backgroundTint="@color/no_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
