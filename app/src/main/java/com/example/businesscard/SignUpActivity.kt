@@ -7,6 +7,7 @@ import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
 import com.example.businesscard.databinding.ActivitySignUpBinding
+import com.example.businesscard.funsDB.checkUserName
 import com.example.businesscard.funsDB.createDataInDB
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -45,25 +46,19 @@ class SignUpActivity : AppCompatActivity() {
             binding.emailEt.error = "Invalid email format"
         } else if (userName.isEmpty()){
             binding.userNameEd.error = "Please enter UserName"
-        } else
-
-            // if userName isNotEmpty
-
-            if (TextUtils.isEmpty(password)) {
+        } else if (checkUserName(userName)){
+            Toast.makeText(this, "This username is used", Toast.LENGTH_SHORT).show()
+        } else  if (TextUtils.isEmpty(password)) {
             binding.passwordEd.error = "Please enter password"
         } else if (password.length < 6) {
             binding.passwordEd.error = "Password must atleast 6 chracters long"
-        } else {
-            firebaseSignUp()
-        }
+        } else  firebaseSignUp()
     }
 
     private fun firebaseSignUp() {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
             .addOnSuccessListener {
-
                 createDataInDB(userName, email)
-
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
