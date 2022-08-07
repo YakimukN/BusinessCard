@@ -13,6 +13,7 @@ import com.example.businesscard.fragments.ProfileFragment
 import com.example.businesscard.fragments.infoExchange.DataModel
 import com.example.businesscard.fragments.infoExchange.sendDataToFragment
 import com.example.businesscard.funsDB.APP_ACTIVITY
+import com.example.businesscard.funsDB.checkUser
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(homeFragment)
 
         APP_ACTIVITY = this
+        checkUser()
         binding.bottomNavigationView.background = null
 
         sendDataToFragment(dataModel, userData)

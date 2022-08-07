@@ -24,7 +24,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/userNameTil"
+        app:layout_constraintBottom_toTopOf="@+id/passwordTil"
         app:startIconDrawable="@drawable/ic_email">
 
         <EditText
@@ -37,26 +37,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/userNameTil"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageSignUp"
-        app:startIconDrawable="@drawable/ic_person">
-
-        <EditText
-            android:id="@+id/userNameEd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="UserName" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordTil"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -64,7 +44,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/userNameTil"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageSignUp"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_lock"
         tools:layout_editor_absoluteX="20dp">

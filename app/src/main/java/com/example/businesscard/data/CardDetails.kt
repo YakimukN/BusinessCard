@@ -1,6 +1,6 @@
 package com.example.businesscard.data
 
-data class CardDetails(var cardType: Int = 0,
+data class CardDetails(var cardType: Int = 1,
                        var color: String = "",
                        var aboutMe: String = "",
                        var git: String = "",
