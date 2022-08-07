@@ -6,8 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.LifecycleOwner
 import com.example.businesscard.HelloActivity
 import com.example.businesscard.databinding.FragmentProfileBinding
+import com.example.businesscard.fragments.infoExchange.DataModel
+import com.example.businesscard.fragments.infoExchange.getDataFromActivity
 import com.example.businesscard.funsDB.APP_ACTIVITY
 import com.example.businesscard.funsDB.firebaseAuth
 
@@ -25,12 +29,12 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        binding.emailProfile.text = firebaseAuth.currentUser?.email
+
         binding.logoutBtn.setOnClickListener {
             firebaseAuth.signOut()
             checkUser()
         }
-
-
     }
 
     private fun checkUser() {
